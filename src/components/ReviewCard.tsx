@@ -1,12 +1,18 @@
 import { useState } from "react";
 
-const ReviewCard = ({ imageUrl, name, username, reviewText, date }) => {
+interface ReviewCardProps {
+  imageUrl: string;
+  name: string;
+  username: string;
+  reviewText: string;
+  date: string;
+}
+
+const ReviewCard: React.FC<ReviewCardProps> = ({ imageUrl, name, username, reviewText, date }) => {
   const [showFullText, setShowFullText] = useState(false);
 
-  // Limit the review text length (e.g., 100 characters) if it's too long
   const shortText = reviewText.length > 100 ? reviewText.substring(0, 100) + "..." : reviewText;
 
-  // Toggle function for showing the full text or not
   const toggleText = () => {
     setShowFullText(!showFullText);
   };
@@ -23,7 +29,6 @@ const ReviewCard = ({ imageUrl, name, username, reviewText, date }) => {
         </div>
       </div>
 
-      {/* Conditionally render the short or full review text */}
       <p className="text-[#000] mb-4 text-lg font-Inter font-normal leading-[140%]">
         {showFullText ? reviewText : shortText}
       </p>
