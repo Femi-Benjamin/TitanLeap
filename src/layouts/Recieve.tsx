@@ -3,6 +3,7 @@ import Expertise from "../components/Expertise";
 import Ourwork from "../components/Ourwork";
 import Hero from "../pages/Hero";
 import Clients from "../components/Clients";
+import Results from "../components/Results";
 
 // videos and images
 import future_pay from "../assets/future_pay.mp4";
@@ -23,8 +24,9 @@ const Home = () => {
       <div className="px-40">
         <Expertise />
         <Aboutus />
-        <Ourwork works={workItems} /> {/* Pass the array of work items */}
+        <Ourwork works={workItems} />
         <Clients />
+        <Results />
       </div>
     </div>
   );

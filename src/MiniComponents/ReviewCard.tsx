@@ -5,10 +5,10 @@ interface ReviewCardProps {
   name: string;
   username: string;
   reviewText: string;
-  date: string;
+  date: string; 
 }
 
-const ReviewCard: React.FC<ReviewCardProps> = ({ imageUrl, name, username, reviewText, date }) => {
+const ReviewCard = ({ imageUrl, name, username, reviewText, date} : ReviewCardProps) => {
   const [showFullText, setShowFullText] = useState(false);
 
   const shortText = reviewText.length > 100 ? reviewText.substring(0, 100) + "..." : reviewText;
@@ -35,7 +35,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ imageUrl, name, username, revie
 
       <div className="text-sm text-tertiary flex justify-between">
         <span
-          className="cursor-pointer hover:text-gray-900 border-b"
+        className="cursor-pointer hover:text-gray-900 border-b"
           onClick={toggleText}
         >
           {showFullText ? "Show less" : "Show original"}

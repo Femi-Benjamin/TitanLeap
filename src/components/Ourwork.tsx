@@ -1,12 +1,10 @@
-// Define the types for a single work item
 export interface WorkItem {
   video: string;
   image: string;
 }
 
-// Define the props that Ourwork will receive
 export interface OurworkProps {
-  works: WorkItem[]; // works should be an array of WorkItem objects
+  works: WorkItem[];
 }
 
 const Ourwork = ({ works }: OurworkProps) => {
@@ -18,14 +16,12 @@ const Ourwork = ({ works }: OurworkProps) => {
         </h1>
       </div>
 
-      {/* Render the work items */}
       <div className="space-y-10">
         {works.map((work, index) => (
           <div
             key={index}
             className="relative flex justify-center items-center"
           >
-            {/* Video */}
             <video
               className="w-full h-full object-cover rounded-3xl"
               src={work.video}
@@ -34,12 +30,12 @@ const Ourwork = ({ works }: OurworkProps) => {
               muted
             />
 
-            {/* Logo at top-left */}
+            {/* Logo top-left */}
             <div className="absolute top-0 left-0 p-4">
               <img className="w-40" src={work.image} alt="Logo" />
             </div>
 
-            {/* Text at bottom-right */}
+            {/* Text bottom-right */}
             <div className="absolute bottom-0 right-0 p-10 text-white text-left max-w-lg font-Inter text-lg leading-7">
               <div className="flex gap-6 pb-4">
                 <p className="border p-2 px-10 rounded-3xl">Motion</p>

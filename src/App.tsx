@@ -2,7 +2,6 @@
 import Home from "./layouts/Recieve";
 
 function App() {
-
   return (
     <>
       <Home />
