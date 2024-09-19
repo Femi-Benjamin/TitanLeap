@@ -3,9 +3,9 @@ import Logo from "../assets/Logo.png";
 
 export default function Footer() {
   return (
-    <footer className="bgwhite text-gray-600 py-8 px-4">
-      <div className="mx-auto">
-        <div className="flex justify-between">
+    <footer className="bgwhite text-gray-600 py-8 items-center">
+      <div className="container mx-auto">
+        <div className="grd grid-cols1 sm:grid-cols2 md:grid-cols4 gap-8 flex flex-col md:flex-row justify-between">
           <div>
             <h3 className="text-purple-700 font-semibold mb-4">Our services</h3>
             <ul className="space-y-2">
@@ -49,23 +49,25 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-200">
-          <div className="flex flex-wrap items-center justify-between">
-            <div className="flex items-center space-x-4">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex items-center space-x-4 mb-4 md:mb-0">
               <img src={Logo} alt="Titan Leap logo" className="h-10" />
             </div>
-            <div className="text-sm mt-4 lg:mt-0">
+            <div className="text-sm text-center md:text-left mb-4 md:mb-0">
               <span>+1 (415) 655-1002</span>
-              <span className="mx-2">|</span>
-              <span>830 Stewart Drive, #212, Sunnyvale, CA, USA, 94085</span>
+              <span className="mx-2 hidden md:inline">|</span>
+              <span className="block md:inline">
+                830 Stewart Drive, #212, Sunnyvale, CA, USA, 94085
+              </span>
             </div>
-            <div className="flex space-x-4 mt-4 lg:mt-0">
+            <div className="flex space-x-4">
               <FaLinkedin className="text-gray-400 hover:text-gray-600 cursor-pointer" />
               <FaTwitter className="text-gray-400 hover:text-gray-600 cursor-pointer" />
               <FaBehance className="text-gray-400 hover:text-gray-600 cursor-pointer" />
             </div>
           </div>
-          <div className="mt-4 flex flex-wrap justify-between items-center text-sm">
-            <span>Privacy Policy</span>
+          <div className="mt-4 flex flex-col md:flex-row justify-between items-center text-sm">
+            <span className="mb-2 md:mb-0">Privacy Policy</span>
             <span>© 2024, Titan leap</span>
           </div>
         </div>

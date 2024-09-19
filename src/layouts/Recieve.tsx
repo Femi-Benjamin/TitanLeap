@@ -21,7 +21,7 @@ const Home = () => {
   return (
     <div className="bg-gray-100 pb-10 h-auto">
       <Hero />
-      <div className="px-40">
+      <div className="xl:mx-40 md:mx28 mx-5">
         <Expertise />
         <Aboutus />
         <Ourwork works={workItems} />
