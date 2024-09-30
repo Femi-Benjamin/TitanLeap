@@ -24,7 +24,7 @@ const Hero = () => {
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold pb-4 sm:pb-6 md:pb-9 fonttitle">
               We are Titan Leap : A Growth Focused
             </h1>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold fonttitle">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold">
               Digital Marketing Agency
             </h1>
           </div>

@@ -16,7 +16,7 @@ const Clients = () => {
   };
 
   return (
-    <div>
+    <div id="clients">
       <div className="text-center text-balance p-10 md:p-20 leading-normal">
         <h1 className="font-bold text-4xl md:text-5xl lg:text-7xl">
           What our <span className="font-title text-primary">Clients</span> say

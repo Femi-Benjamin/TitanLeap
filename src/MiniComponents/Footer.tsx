@@ -1,4 +1,5 @@
 import { FaTwitter, FaBehance, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 
 export default function Footer() {
@@ -51,7 +52,9 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-4 mb-4 md:mb-0">
-              <img src={Logo} alt="Titan Leap logo" className="h-10" />
+              <Link to="#">
+                <img src={Logo} alt="Titan Leap logo" className="h-10" />
+              </Link>
             </div>
             <div className="text-sm text-center md:text-left mb-4 md:mb-0">
               <span>+1 (415) 655-1002</span>

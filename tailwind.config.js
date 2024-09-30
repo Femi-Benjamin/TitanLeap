@@ -13,6 +13,7 @@ export default {
         secondary: "#FED65E",
         navBar: "#1d1e25",
         textBase: "#8f9091",
+        yellow: "#F3B702",
       },
     },
   },
