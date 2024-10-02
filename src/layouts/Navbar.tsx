@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Logo from "../assets/Logo.png"
 import yellowdot from "../assets/yellowdot.png"
-import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -35,7 +34,7 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
-                <Link to='/services'
+                <a
                   key={item.name}
                   href={item.href}
                   className="text-purple-300 hover:text-primary px-3 py-2 rounded-md text-lg font-semibold relative group"
@@ -46,7 +45,7 @@ const Navbar = () => {
                     src={yellowdot}
                     alt="dot"
                   />
-                </Link>
+                </a>
               ))}
             </div>
           </div>
