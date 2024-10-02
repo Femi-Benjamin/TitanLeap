@@ -5,8 +5,8 @@ import Logo from "../assets/Logo.png";
 const ServiceNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="sticky top-0 z-50">
-      <header className="container mx-auto px-4 py-4 flex justify-between items-center relative">
+    <div className="sticky top-0 z-50 md:bg-transparent bg-neutral-100">
+      <header className="containe mx-auto px-4 py-4 flex justify-between items-center relative">
         <Link to="/">
           <div className="flex-shrink-0">
             <img className="w-40" src={Logo} alt="titanleaplogo" />
@@ -15,7 +15,7 @@ const ServiceNavbar = () => {
         <nav
           className={`
           ${isMenuOpen ? "max-h-64 opacity-100" : "max-h-0 opacity-0 "}
-          md:max-h-full md:opacity-100 absolute md:relative top-full md:top-auto left-0 md:left-auto backdrop-blur sm:backdrop-blur md:border-none border-b-2 border-gray-300  md:bg-transparent w-full md:w-auto flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 py-4 md:py-0 px-4 md:px-0 overflow-hidden transition-all duration-300 ease-in-out md:transition-none md:overflow-visible md:font-semibold text-xl font-bold md:text-purple-300
+          md:max-h-full md:opacity-100 absolute md:relative top-full md:top-auto left-0 md:left-auto md:bg-transparent md:rounded-lg md:backdrop-blur-xl backdrop-blur md:border-none border-b-2 border-gray-300 w-full md:w-auto flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-6 py-4 md:py-0 px-4 md:px-0 overflow-hidden transition-all duration-300 ease-in-out md:transition-none md:overflow-visible md:font-semibold text-xl font-bold md:text-purple-400
         `}
         >
           <a

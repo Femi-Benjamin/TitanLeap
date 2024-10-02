@@ -73,25 +73,24 @@ export default function Expertise() {
               className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-110"
             />
             <Link to="/services">
-            <div className="absolute inset-0 hover:bg-black hover:bg-opacity-30 flex flex-col justify-between md:p-6 md:px-5 px-3 text-white">
-              <div className="flex justify-between itemsstart items-center">
-                <h2 className="md:font-medium font-normal md:text-2xl text-lg">
-                  {item.text}
-                </h2>
-                <ArrowRight className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 hover:bg-black hover:bg-opacity-30 flex flex-col justify-between md:p-6 md:px-5 px-3 text-white">
+                <div className="flex justify-between itemsstart items-center">
+                  <h2 className="md:font-medium font-normal md:text-2xl text-lg">
+                    {item.text}
+                  </h2>
+                  <ArrowRight className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+                <div className="flex flex-wrap gap-2 mt4">
+                  {item.tags.map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="border xl:px-3 md:px-2 md:py-1 md:p-0 p-1 rounded-full xl:text-lg md:text-sm text-xs"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div className="flex flex-wrap gap-2 mt4">
-                {item.tags.map((tag, tagIndex) => (
-                  <span
-                    key={tagIndex}
-                    className="border xl:px-3 md:px-2 md:py-1 md:p-0 p-1 rounded-full xl:text-lg md:text-sm text-xs"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-            
             </Link>
           </div>
         ))}
